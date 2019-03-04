@@ -33,6 +33,15 @@ ul {
   width: 0.45rem;
   height: .45rem;
 }
+#header .left a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  line-height: .45rem;
+}
+#header .left a i {
+  font-size: .14rem;
+}
 #header .center {
   flex: 1;
   color: #fff;
@@ -42,6 +51,14 @@ ul {
 #header .center h4 {
   font-weight: normal;
   line-height: .45rem;
+}
+#header .center form input {
+  height: .35rem;
+  margin-bottom: 0;
+  text-align: left;
+  background: #fff;
+  color: #000;
+  font-size: .14rem;
 }
 #header .right {
   width: 0.45rem;
@@ -58,7 +75,6 @@ ul {
 }
 #main {
   padding: .45rem 0;
-  position: relative;
   height: 100vh;
 }
 #main .mui-scroll-wrapper {

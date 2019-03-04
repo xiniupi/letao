@@ -1,0 +1,51 @@
+@import 'base.less';
+@main-color:#006699;
+#main{
+    background: #fff;
+    .search-form{
+        form{
+            display: flex;
+            padding: .1rem;
+            input{
+                flex: 1;
+                border:1px solid @main-color;
+                background: #fff;
+                font-size: .14rem;
+                text-align: left;
+                height: 0.36rem;
+                border-radius: .06rem 0 0 .06rem; 
+                margin-bottom: 0;
+            }
+            button{
+                width: .6rem;
+                height: 0.36rem;
+                border-radius: 0 .06rem .06rem 0; 
+                background: @main-color;
+                border-color: @main-color;
+                color: #fff;
+            }
+        }
+    }
+    .search-history{
+       
+        .mui-card-header{
+            span{
+                font-size: .14rem
+            }
+            a{
+                font-size: .14rem;
+                color: #666;
+            }
+            .mui-table-view-cell:after{
+                left: 0;
+            }
+        }
+        .mui-card-content{
+            .mui-table-view-cell:after{
+                left: 0;
+                
+            }
+        }             
+        
+    }
+}

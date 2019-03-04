@@ -108,64 +108,41 @@ ul {
 #footer ul li a span {
   line-height: 1;
 }
-#main .slide a {
-  display: block;
+#main {
+  background: #fff;
 }
-#main .slide a img {
-  width: 100%;
-}
-#main .nav {
-  padding: .1rem;
-}
-#main .nav a {
-  display: block;
-}
-#main .nav a img {
-  width: 100%;
-}
-#main .brander {
-  padding: .1rem;
-}
-#main .brander .mui-col-xs-8 a {
+#main .search-form form {
   display: flex;
-}
-#main .brander .mui-col-xs-8 a img {
-  width: 50%;
-  height: 1.2rem;
-}
-#main .brander .mui-col-xs-4 a {
-  display: block;
-}
-#main .brander .mui-col-xs-4 a img {
-  height: 2.4rem;
-}
-#main .brand,
-#main .sport,
-#main .women,
-#main .man {
   padding: .1rem;
 }
-#main .brand .title a,
-#main .sport .title a,
-#main .women .title a,
-#main .man .title a {
-  display: block;
+#main .search-form form input {
+  flex: 1;
+  border: 1px solid #006699;
+  background: #fff;
+  font-size: .14rem;
+  text-align: left;
+  height: 0.36rem;
+  border-radius: .06rem 0 0 .06rem;
+  margin-bottom: 0;
 }
-#main .brand .title a img,
-#main .sport .title a img,
-#main .women .title a img,
-#main .man .title a img {
-  width: 100%;
+#main .search-form form button {
+  width: .6rem;
+  height: 0.36rem;
+  border-radius: 0 .06rem .06rem 0;
+  background: #006699;
+  border-color: #006699;
+  color: #fff;
 }
-#main .brand .content a,
-#main .sport .content a,
-#main .women .content a,
-#main .man .content a {
-  display: block;
+#main .search-history .mui-card-header span {
+  font-size: 0.14rem;
 }
-#main .brand .content a img,
-#main .sport .content a img,
-#main .women .content a img,
-#main .man .content a img {
-  width: 100%;
+#main .search-history .mui-card-header a {
+  font-size: .14rem;
+  color: #666;
+}
+#main .search-history .mui-card-header .mui-table-view-cell:after {
+  left: 0;
+}
+#main .search-history .mui-card-content .mui-table-view-cell:after {
+  left: 0;
 }

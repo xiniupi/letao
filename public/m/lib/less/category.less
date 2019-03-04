@@ -1,0 +1,29 @@
+@import 'base.css';
+#main{
+    background: #ccc;
+    display: flex;
+    .category-left{
+            width: .8rem;
+            li{
+               
+                  &.active{
+                            background: #ccc;
+                        }
+            }
+            .mui-table-view-cell:after{
+                left: 0;
+            }         
+    }     
+    .category-right{
+        flex: 1;
+        padding: .1rem;
+        a{
+            display: block;
+            background: #fff;
+            text-align: center;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>乐淘移动版分类页</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./lib/less/category.css">
+</head>
+<body>
+    <header id="header">
+        <div class="left">
+            <a href="#">
+                <i class="fa fa-arrow-left"></i>
+            </a>
+        </div>
+        <div class="center">
+            <form action="">
+                <input type="search" placeholder="请输入要搜索的商品">
+            </form>
+        </div>
+        <div class="right">
+            <a href="search.html">
+                <i class="fa fa-search"></i>
+            </a>
+        </div>
+    </header>
+    <main id="main">
+        
+         <div class="category-left">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <!--这里放置真实显示的DOM内容-->
+                        <ul class="mui-table-view">
+                            <li class="mui-table-view-cell active">运动馆</li>
+                            <li class="mui-table-view-cell">女士馆</li>
+                            <li class="mui-table-view-cell">男士馆</li>
+                        </ul>
+                    </div>
+                </div>
+         </div>
+        <div class="category-right">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!--这里放置真实显示的DOM内容-->
+                    <div class="mui-row">
+                        <div class="mui-col-xs-4"><a href="#"><img src="/mobile/images/brand1.png" alt="">
+                                <p>耐克</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img src="/mobile/images/brand2.png" alt="">
+                                <p>耐克</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img src="/mobile/images/brand3.png" alt="">
+                                <p>耐克</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img src="/mobile/images/brand4.png" alt="">
+                                <p>耐克</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img src="/mobile/images/brand5.png" alt="">
+                                <p>耐克</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img src="/mobile/images/brand6.png" alt="">
+                                <p>耐克</p>
+                            </a></div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+       
+    </main>
+    <footer id="footer">
+        <ul>
+            <li class="active"><a href="index.html"><i class="fa fa-home"></i><span>首页</span></a></li>
+            <li><a href="category.html"><i class="fa fa-bars"></i><span>分类</span></a></li>
+            <li><a href="cart.html"><i class="fa fa-shopping-cart"></i><span>购物车</span></a></li>
+            <li><a href="user.html"><i class="fa fa-user"></i><span>个人中心</span></a></li>
+        </ul>
+    </footer>
+<script id="categoryLeftTpl" type="text/html">
+    {{each rows value i}}
+    <li class="mui-table-view-cell {{i == 0 ?'active':''}}" data-id ="{{value.id}}">{{value.categoryName}}</li>
+    {{/each}}
+</script>
+<script id="categoryRightTpl" type="text/html">
+    {{if rows.length >0}}
+    {{each rows value i}}
+    <div class="mui-col-xs-4"><a href="#"><img src="{{value.brandLogo}}" alt="">
+        <p>{{value.brandName}}</p>
+    </a></div>
+    {{/each}}
+    {{else}}
+    <p>在下实在给不了太多</p>
+    {{/if}}
+</script>
+
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/category.js"></script>
+</body>
+</html>
