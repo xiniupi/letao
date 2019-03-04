@@ -48,7 +48,7 @@ $(function(){
         }else{
             searchHistory = [];
         }
-         var html = template('searchTpl',{list:searchHistory});
+         var html = template('searchTpl',{searchHistory});
          $('.search-history ul').html(html);
      }
      function deleteHistory(){
