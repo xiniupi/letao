@@ -1,0 +1,60 @@
+@import 'base.less';
+#main{
+    background: #fff;
+    .product-form{
+        form{
+            display: flex;
+            padding: .1rem;
+            input{
+                flex: 1;
+                border:1px solid @main-color;
+                background: #fff;
+                font-size: .14rem;
+                text-align: left;
+                height: 0.36rem;
+                border-radius: .06rem 0 0 .06rem; 
+                margin-bottom: 0;
+            }
+            button{
+                width: .6rem;
+                height: 0.36rem;
+                border-radius: 0 .06rem .06rem 0; 
+                background: @main-color;
+                border-color: @main-color;
+                color: #fff;
+            }
+        }
+    }
+    .product-content{
+        .mui-card-header{
+            a{
+                color: #ccc;
+                font-size: .14rem;
+                &.active{
+                    color: red;
+                }
+            }
+        }
+        .mui-card-content{
+            text-align: center;
+            .mui-col-xs-6{
+                padding: .1rem .05rem;
+                .product-img{
+                    width: 100%;
+                }
+                box-shadow: 0 .01rem 0 #ccc;
+                &:nth-child(odd){
+                    box-shadow: .01rem .01rem 0 #ccc;  
+                }
+            }
+            .product-name {
+                overflow: hidden; // 隐藏溢出部分
+                text-overflow: ellipsis; //溢出用省略号显示
+                display: -webkit-box; //将对象作为弹性伸缩盒子模型显示
+                -webkit-box-orient: vertical; //从上到下垂直排列子元素（设置伸缩盒子的子元素排列方式）
+                -webkit-line-clamp: 2; //这个属性不是css的规范属性，需要组合上面两个属性，表示显示的行数。
+            }
+        }
+        
+    }
+}

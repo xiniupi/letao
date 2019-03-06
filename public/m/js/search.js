@@ -39,6 +39,7 @@ $(function(){
             localStorage.setItem('searchHistory',JSON.stringify(searchHistory));
             queryHistory();
             $('.input-search').val('');
+            location = 'productList.html?search=' +search +'&time='+new Date().getTime();
         })
     }
      function queryHistory(){
@@ -52,10 +53,25 @@ $(function(){
          $('.search-history ul').html(html);
      }
      function deleteHistory(){
+        // 1. 给所有删除按钮添加点击事件（页面历史记录列表是动态渲染查询了之后才有列表）要使用委托添加事件 
+        // 2. 点击删除按钮的要获取当前要删除的元素的索引
+        // 3. 再获取搜索记录的数组 把这个索引对应的值删掉
+        // 4. 重新把删除完成后的数组 保存到本地存储中
+        // 5. 调用查询刷新列表
+        $('.search-history ul').on('tap','.btn-delete',function(){
+            var index = $(this).data('index');
+            var searchHistory = JSON.parse(localStorage.getItem('searchHistory'));
+            searchHistory.splice(index,1);
+            localStorage.setItem('searchHistory',JSON.stringify(searchHistory));
+            queryHistory();
+        })
 
      }
      function clearHistory(){
-
+        $('.search-history .btn-clear').on('tap',function(){
+            localStorage.removeItem('searchHistory');
+            queryHistory();
+        })
      }
 
 
