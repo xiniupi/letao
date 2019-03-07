@@ -8,7 +8,7 @@ $(function(){
     sortProduct();
     // 调用下拉刷新和上拉加载的功能函数
     pullRefresh();
-   
+    goDetail();
     function queryProduct(){
          /* 思路
             1. 根据当前商品名称来搜索商品(商品名称就是用户在输入框输入内容也就是当前url参数 search的值)
@@ -29,6 +29,7 @@ $(function(){
                 $('.mui-card-content .mui-col-xs-6').html(html);
             }
         })
+       
     }
     function searchProduct(){
         $('.btn-search').on('tap',function(){
@@ -169,7 +170,12 @@ $(function(){
             }, 1000)
         }
     }
-
+    function goDetail(){
+        $('.product-content').on('tap','.product-buy',function(){
+            var id = $(this).data('id');
+            location = 'detail.html?id='+id;
+        })
+    }
 
     function getQueryString(name) {
         var reg = new RegExp("[^\?&]?" + encodeURI(name) + "=[^&]+");

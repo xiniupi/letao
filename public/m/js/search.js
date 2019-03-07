@@ -4,6 +4,7 @@ $(function(){
     deleteHistory();
     clearHistory();
     initScroll();
+    goSearch();
     // 1. 点击搜索添加记录 添加事件
     // 2. 获取当前输入内容 搜索的内容
     // 3. 判断如果没有输入内容 提示输入
@@ -52,6 +53,7 @@ $(function(){
          var html = template('searchTpl',{searchHistory});
          $('.search-history ul').html(html);
      }
+     var isDelete = false;
      function deleteHistory(){
         // 1. 给所有删除按钮添加点击事件（页面历史记录列表是动态渲染查询了之后才有列表）要使用委托添加事件 
         // 2. 点击删除按钮的要获取当前要删除的元素的索引
@@ -64,6 +66,7 @@ $(function(){
             searchHistory.splice(index,1);
             localStorage.setItem('searchHistory',JSON.stringify(searchHistory));
             queryHistory();
+            isDelete = true;
         })
 
      }
@@ -73,8 +76,17 @@ $(function(){
             queryHistory();
         })
      }
+     function goSearch(){
+         $('.search-history .mui-table-view').on('tap','li',function(){
+             if(isDelete == false){
+             var search = $(this).data('name');
+            location = 'productList.html?search=' +search +'&time='+new Date().getTime();
+             }
+             isDelete = false;
+         })
+     }
 
-
+     
      function initScroll(){
         mui('.mui-scroll-wrapper').scroll({
             deceleration: 0.0005, //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006

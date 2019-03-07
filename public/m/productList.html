@@ -12,7 +12,7 @@
 <body>
     <header id="header">
         <div class="left">
-            <a href="#">
+            <a href="search.html">
                 <i class="fa fa-arrow-left"></i>
             </a>
         </div>
@@ -84,12 +84,14 @@
         </ul>
     </footer>
         <script id="productListTpl" type="text/html">
+            
             {{each data value i}}
             <img src="{{value.pic[0].picAddr}}" alt="" class="product-img">
             <p class="product-name">{{value.proName}}</p>
             <p class="product-price"><span>¥{{value.price}}</span><del>¥{{value.oldPrice}}</del></p>
-            <button type="button" class="mui-btn mui-btn-primary product-buy">立即购买{{value.num}}</button>
+            <button type="button" class="mui-btn mui-btn-primary product-buy" data-id="{{value.id}}">立即购买{{value.num}}</button>
             {{/each}}
+            
         </script>
     <script src="./lib/mui/js/mui.js"></script>
     <script src="./lib/zepto/zepto.min.js"></script>

@@ -73,7 +73,7 @@
     </footer>
     <script id="searchTpl" type="text/html">
             {{each searchHistory value i}}
-            <li class="mui-table-view-cell">{{value.key}}    
+            <li class="mui-table-view-cell" data-name="{{value.key}}">{{value.key}}    
                 <span class="mui-badge fa fa-close btn-delete" data-index="{{i}}"></span>
              </li>
             {{/each}}

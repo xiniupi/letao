@@ -1,0 +1,162 @@
+html {
+  font-size: 26.66667vw;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+body {
+  font-size: .14rem;
+}
+img {
+  vertical-align: middle;
+}
+li {
+  list-style: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+#header {
+  display: flex;
+  background: #006699;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+#header .left {
+  width: 0.45rem;
+  height: .45rem;
+}
+#header .left a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  line-height: .45rem;
+}
+#header .left a i {
+  font-size: .14rem;
+}
+#header .center {
+  flex: 1;
+  color: #fff;
+  text-align: center;
+  line-height: .45rem;
+}
+#header .center h4 {
+  font-weight: normal;
+  line-height: .45rem;
+}
+#header .center form input {
+  height: .35rem;
+  margin-bottom: 0;
+  text-align: left;
+  background: #fff;
+  color: #000;
+  font-size: .14rem;
+}
+#header .right {
+  width: 0.45rem;
+  height: .45rem;
+}
+#header .right a {
+  display: block;
+  text-align: center;
+  line-height: .45rem;
+}
+#header .right a i {
+  font-size: .14rem;
+  color: #fff;
+}
+#main {
+  padding: .45rem 0;
+  height: 100vh;
+}
+#main .mui-scroll-wrapper {
+  position: relative;
+  height: 100%;
+}
+#footer {
+  width: 100%;
+  background: #006699;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+#footer ul {
+  display: flex;
+}
+#footer ul li {
+  flex: 1;
+}
+#footer ul li.active a {
+  color: orange;
+}
+#footer ul li a {
+  height: .45rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+#footer ul li a span {
+  line-height: 1;
+}
+#main {
+  padding-bottom: .9rem;
+  background: #fff;
+}
+#main a .left {
+  width: .8rem;
+}
+#main a .left img {
+  width: 100%;
+}
+#main a .left .mui-checkbox {
+  position: static;
+}
+#main a .left .mui-checkbox input {
+  top: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -0.5rem;
+}
+#main a .left .mui-checkbox input:before {
+  color: hotpink;
+  font-size: .2rem;
+}
+#main a:not(.mui-btn) {
+  white-space: normal;
+}
+#main a .right p {
+  margin-bottom: .08rem;
+  color: #666;
+}
+#main a .right p:nth-child(2) .price {
+  color: red;
+}
+#main a .right .size {
+  display: flex;
+  justify-content: space-between;
+  color: #000;
+}
+#total {
+  position: fixed;
+  bottom: .45rem;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  background: #ccc;
+  padding-left: .1rem;
+}
+#total .left {
+  color: red;
+}

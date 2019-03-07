@@ -1,0 +1,46 @@
+@import 'base.less';
+#main{
+    .content{
+        li{
+            &:after{
+                left:0;
+            }
+            span.newPrice{
+                color: red;
+                font-weight: 700;
+            }
+            span.oldPrice{
+                color: #666;
+                font-weight: 700;
+            }
+            .size{
+                line-height: .33rem;
+                button{
+                    margin-bottom: .05rem;
+                }
+            }
+        }
+    }
+}
+#footer{
+    background: #ccc;
+    .mui-col-xs-2{
+        line-height: .45rem;
+        text-align: center;
+        a{
+            color: #666;     
+            i{
+                font-size: .2rem;
+            }
+           
+        }
+        
+    }
+    .mui-col-xs-5{
+        padding: .06rem .05rem;
+        button{
+            width: 100%;
+        }
+    }
+  
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>乐淘移动版购物车页</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./lib/less/cart.css">
+</head>
+<body>
+    <header id="header">
+        <div class="left">
+            <a href="detail.html">
+                <i class="fa fa-arrow-left"></i>
+            </a>
+        </div>
+        <div class="center">
+            <h4>购物车</h4>
+        </div>
+        <div class="right">
+            <a href="detail.html">
+                <i class="fa fa fa-refresh"></i>
+            </a>
+        </div>
+    </header>
+    <main id="main">
+            <ul class="mui-table-view">
+                    <li class="mui-table-view-cell">
+                        <div class="mui-slider-right mui-disabled">
+                            <a class="mui-btn mui-btn-primary">编辑</a>
+                            <a class="mui-btn mui-btn-red">删除</a>
+                        </div>
+                        <div class="mui-slider-handle">
+                            <a class="mui-navigate-right">
+                                <div class="mui-row">
+                                    <div class="mui-col-xs-3 left">
+                                        <img src="./images/brand1.png" alt="">
+                                        <div class="mui-checkbox">
+                                            <input name="checkbox" value="Item 1" type="checkbox">
+                                        </div>
+                                    </div>
+                                    <div class="mui-col-xs-9 right">
+                                        <p>匡威三星标1970s converse复刻 142334c 144757c三星标黑色高帮</p>
+                                        <p><span class="price">¥499.1</span><del class="oldprice">¥555.5</del></p>
+                                        <div class="size">
+                                            <strong>鞋码 : 50</strong><span>X1双</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="mui-table-view-cell">
+                           
+                        <a class="mui-navigate-right">Item 2</a>
+                      
+                    </li>
+                    <li class="mui-table-view-cell">
+                        <a class="mui-navigate-right">Item 3</a>
+                    </li>
+                </ul>
+    </main>
+    <section id="total">
+        <div class="left">
+            <strong>订单总额:</strong>¥<span>0.00</span>
+        </div> 
+        <button type="button" class="mui-btn mui-btn-danger btn-order">生成订单</button>
+    </section>
+    <footer id="footer">
+        <ul>
+            <li class="active"><a href="index.html"><i class="fa fa-home"></i><span>首页</span></a></li>
+            <li><a href="category.html"><i class="fa fa-bars"></i><span>分类</span></a></li>
+            <li><a href="cart.html"><i class="fa fa-shopping-cart"></i><span>购物车</span></a></li>
+            <li><a href="user.html"><i class="fa fa-user"></i><span>个人中心</span></a></li>
+        </ul>
+    </footer>
+    
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/cart.js"></script>
+</body>
+</html>

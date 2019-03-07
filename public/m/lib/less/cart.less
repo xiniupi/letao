@@ -1,0 +1,65 @@
+@import 'base.less';
+#main{
+    padding-bottom: .9rem;
+    background: #fff;
+    a{
+   
+        .left{
+            width: .8rem;
+         
+            img{
+                width: 100%;
+        
+              
+            }
+            .mui-checkbox{
+                position: static;
+                input{
+                top: auto;
+                left: 50%; 
+                transform: translateX(-50%);
+                bottom: -0.5rem;
+                &:before{
+                    color:hotpink;
+                    font-size: .2rem;
+                }
+                }
+            }
+         }
+         &:not(.mui-btn) {
+            white-space:normal;
+        }
+         .right{
+             p{
+                 margin-bottom: .08rem;
+                 color: #666;
+                 &:nth-child(2){
+                  .price{
+                      color: red;
+                  }
+                 
+                 }
+             }
+             .size{
+                 display: flex;
+                 justify-content: space-between;
+                 color: #000;
+             }
+         }
+    }
+   
+}
+#total{
+    position: fixed;
+    bottom: .45rem;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background: #ccc;
+    padding-left: .1rem;
+    .left{
+        color: red;
+    }
+}
