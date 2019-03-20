@@ -125,7 +125,6 @@ ul {
   top: auto;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -0.5rem;
 }
 #main a .left .mui-checkbox input:before {
   color: hotpink;

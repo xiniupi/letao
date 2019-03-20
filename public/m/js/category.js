@@ -2,6 +2,12 @@ $(function(){
     //发送ajax请求
     $.ajax({
         url:'/category/queryTopCategory',
+        beforeSend:function(){
+            $('.mask').show();
+        },
+        complete:function(){
+            $('.mask').hide();
+        },
         success:function(data){
             // console.log(data)
             // return;

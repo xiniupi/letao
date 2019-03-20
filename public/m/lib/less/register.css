@@ -22,7 +22,6 @@ ul {
   padding: 0;
 }
 #header {
-  z-index: 999;
   display: flex;
   background: #006699;
   width: 100%;
@@ -82,20 +81,10 @@ ul {
   position: relative;
   height: 100%;
 }
-#main .mask {
-  width: 100%;
-  height: 100%;
-  z-index: 998;
-  left: 0;
-  top: 0;
-  position: absolute;
-  background: #0f0;
-}
 #footer {
   width: 100%;
   background: #006699;
   position: fixed;
-  z-index: 999;
   bottom: 0;
   left: 0;
 }
@@ -118,4 +107,19 @@ ul {
 }
 #footer ul li a span {
   line-height: 1;
+}
+#main .vcode {
+  display: flex;
+}
+#main .vcode input {
+  flex: 1;
+}
+#main .vcode .btn-vcode {
+  width: 30%;
+}
+#main .mui-button-row {
+  padding: .05rem;
+}
+#main .mui-button-row .btn-register {
+  width: 100%;
 }

@@ -29,6 +29,9 @@ $(function(){
             }
         })
     })
+    $('.btn-register').on('tap',function(){
+        location = 'register.html';
+    })
     function getQueryString(name) {
         var reg = new RegExp("[^\?&]?" + encodeURI(name) + "=[^&]+");
         var arr = location.search.match(reg);
